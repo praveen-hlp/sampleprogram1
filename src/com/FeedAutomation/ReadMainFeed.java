@@ -17,7 +17,8 @@ public class ReadMainFeed {
 	public static void checkPid(String pid)
 	{
 		int res;
-		URL memcacheUrl = new URL("http://75.126.75.206:8081/caching/service/get?namespace=DALFeedsjabong&key=1_pid");
+		String feedip = "";
+		URL memcacheUrl = new URL("http://" + feedip + "/caching/service/get?namespace=DALFeedsjabong&key=1_pid");
 		HttpURLConnection huc = null;
 		huc = (HttpURLConnection)  memcacheUrl.openConnection();
 		huc.setRequestMethod("GET");
